@@ -1,0 +1,92 @@
+html,body
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+body
+{
+	height: 100vh;
+	background-image:url('back.jpg');
+}
+.button1
+{
+	position: absolute;
+    top: 50%;
+	left: 28%;
+}
+.button2
+{
+	position: absolute;
+    top: 50%;
+	left: 80%;
+}
+.button3
+{
+	position: absolute;
+    top: 50%;
+	left: 55%;
+}
+button
+{
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	transform: translate(-60%, -60%);
+}
+button{
+	background: none;
+	color: #ccc;
+	width: 200px;
+	height: 40px;;
+	border: 2px solid #338033;
+	font-size: 18px;
+	border-radius: 4px;
+	transition: .6s;
+	overflow: hidden;	
+}
+button:focus{
+	outline: none;
+}
+button:before{
+	content: '';
+	display: block;
+	position: absolute;
+	background: rgba(255,0,0,0.3);
+	width: 60px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	opacity: .5s;
+	filter: blur(30px);
+	transform: translteX(-130px) skewX(-15deg);
+}
+button:after{
+	content: '';
+	display: block;
+	position: absolute;
+	background: rgba(255,255,255,.2);
+	width: 30px;
+	height: 100%;
+	left: 30px;
+	top: 0;
+	opacity: 0;
+	filter: blur(30px);
+	transform: translateX(-100px) scaleX(-15deg);
+}
+button:hover{
+	background: #338033;
+	cursor: pinter;
+}
+
+button:hover:before{
+	transform: translateX(300px) skewX(-15deg);
+	opacity: .6;
+	transition: .7s;
+}
+button:hover:after{
+	transform: translateX(300px) skewX(-15deg);
+	opacity: 1;
+	transition: .7s;
+}
+
